@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Getting To Know You Questionnaire</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="p9.css"/>
+</head>
+
+<body>
+    <h1>Getting To Know You Questionnaire</h1>
+    <hr>
+    
+    <form action="p9.php" method="post">
+        
+        <h3>Personal Information</h3>
+        
+        <!--Text Boxes-->
+        <p>First Name<br>
+            <input type="text" name="firstname" size="50"/>
+        </p>
+        
+        <p>Last Name<br>
+            <input type="text" name="lastname" size="20" />
+        </p>
+        
+        <p>Address<br>
+            <input type="text" name="address" size="50" />
+        </p>
+        
+        <p>Apt.<br>
+        	<input type="text" name="apt" size="20"/>
+        </p>
+        
+        <p>City<br>
+        	<input type="text" name="city" size="40"/>
+        </p>
+        
+        <p>State<br>
+        	<input type="text" name="state" size="30"/>
+        </p>
+        
+        <p>Zip Code<br>
+        	<input type="text" name="zip" size="30"/>
+        </p>
+
+        <hr>
+
+        <h3>Fun Facts About You</h3>
+        
+        <!--Radio Buttons-->
+        
+        <p><strong>What is your favorite genre of movies?</strong><br>
+            <input type="radio" name="movie" value="Action" checked="checked"/> Action<br>
+            <input type="radio" name="movie" value="Comedy"/> Comedy<br>
+            <input type="radio" name="movie" value="Romance"/> Romance<br>
+            <input type="radio" name="movie" value="Science Fiction"/> Science Fiction
+        </p>
+
+        <!--Drop Down Menu-->
+        <h4>What is your favorite meal? 
+            <select name="meal">
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+            </select>
+        </h4>
+ 
+        <!--Checkbox-->
+        <p><strong>Like pizza?</strong>
+            <input type="checkbox" name="pizza"/>
+        </p>
+        
+        <p><strong>How many people are in your family? </strong>
+            <input type="text" name="family" size="10"/>
+        </p>
+        
+        <!--Multiple Line Text Box-->
+        <p><strong>Describe yourself in one paragraph:</strong><br>
+            <textarea name="about" rows="6" cols="115";></textarea>
+        </p>
+         
+        <hr>
+
+        <!--Submit Button-->
+        <p><input type="submit" value="Submit" name="submit"/></p>
+		
+	</form>
+
+</body>
+</html>

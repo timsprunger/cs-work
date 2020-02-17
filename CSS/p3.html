@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--
+    p3.html    
+    Tim Sprunger
+    February 14, 2018
+    This web page uses random text and sections in html to demonstrate CSS positioning.
+-->
+<html>
+
+<head>    
+    
+    <meta charset="utf-8">
+    <title>Beaches</title>
+    
+    <style>
+
+        body{
+            background-image: url("background.jpg");
+            font-family: Garamond, Arial, Courier, serif;
+        }
+
+        .pagebody{
+            width: 1250px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:50px;
+            margin-bottom:140px;
+            background-color: white;	
+        }
+
+        header > h1{
+            text-align: center;
+            font-size: 3em;
+            margin: 0;
+            padding: 7.5px;
+            text-decoration: underline;
+        }
+        
+        p{
+            margin-top: 0px;
+            font-size: 1.5em;
+            text-indent: 40px;
+            line-height: 30px;
+        }
+
+        header{
+            border: 6.5px solid black;
+            background-color: #0BB5FF;
+        }
+
+        article{
+            padding-top: 0px;
+            width: 900px;
+            padding: 5px;
+            margin: 15px;
+            background-color: white;
+        }
+
+        aside{
+            float: right;
+            width: 275px;
+            height: auto;
+            padding: 15px;
+            margin: 15px;
+            background-color: lightgray;
+        }
+        
+        footer{
+            clear: both;
+            padding-left: 15px;
+            padding-right: 15px;
+            border: 4px solid black;
+        }
+        
+        .firstword{
+            font-weight: bold;
+            color: #0BB5FF;
+        }
+        
+        #thankyou{
+            position: fixed;
+            bottom: 0px;
+            right: 0px;      
+        }
+        
+        .container{
+			position: relative;
+		}
+
+		.text {
+			position: absolute;
+			color: #0BB5FF;
+			font-size: 40px;
+			font-weight: bold;
+            right: 25px;
+            bottom: -400px;  
+        }
+        
+        .beach1{
+            float: right;
+            width: 65%;
+            margin-left: 15px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+        }
+        
+        .beach2{
+            float:left;
+            width: 65%;
+            margin-right: 15px;
+            margin-bottom: 5px;
+        }
+
+        #footertext{
+            font-size: 12px;
+            padding-top: 10px;
+            text-align: justify;
+            text-indent: 0px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="pagebody">    
+        
+        <header>
+            
+            <h1>Beaches</h1> 
+        
+        </header>
+
+        <aside>
+            
+            <p>
+            <span class="firstword">Beaches</span> are landforms alongside a body of water which consists of loose particles. The particles composing a beach are typically made from rock, such as sand, gravel, shingle, pebbles, or cobblestones. The particles can also be biological in origin, such as mollusc shells or coralline algae.
+            </p>
+
+            <p>
+            <span class="firstword">Some</span> beaches have man-made infrastructure, such as lifeguard posts, changing rooms, and showers. They may also have hospitality venues (such as resorts, camps, hotels, and restaurants) nearby. Wild beaches, also known as undeveloped or undiscovered beaches, are not developed in this manner. Wild beaches can be valued for their untouched beauty and preserved nature.  Beaches typically occur in areas along the coast where wave or current action deposits and reworks sediments.
+            </p>
+            
+            <p>
+            The extension of this form of leisure to the middle and working class began with the development of the railways in the 1840s, which offered cheap and affordable fares to fast growing resort towns. In particular, the completion of a branch line to the small seaside town Blackpool from Poultron led to a sustained economic and demographic boom. A sudden influx of visitors, arriving by rail, provided the motivation for entrepreneurs to build accommodation and create new attractions, leading to more visitors and a rapid cycle of growth throughout the 1850s and 1860s. 
+            </p>
+        
+        </aside>
+
+        <article>
+            
+            <p>
+            <span class="firstword">There</span> are several conspicuous parts to a beach that relate to the processes that form and shape it.The part mostly above water (depending upon tide), and more or less actively influenced by the waves at some point in the tide, is termed the beach berm. The berm is the deposit of material comprising the active shoreline. The berm has a crest (top) and a face—the latter being the slope leading down towards the water from the crest. At the very bottom of the face, there may be a trough, and further seaward one or more long shore bars: slightly raised, underwater embankments formed where the waves first start to break.
+            </p>
+            
+            <div class="container">
+                
+                <img class="beach1" src="beach1.jpg" alt="Beach Picture 1" >
+                <div class="text">Beach Image</div>               
+            
+            </div>
+            
+            <p>
+            <span class="firstword">The</span> sand deposit may extend well inland from the berm crest, where there may be evidence of one or more older crests (the storm beach) resulting from very large storm waves and beyond the influence of the normal waves. At some point the influence of the waves (even storm waves) on the material comprising the beach stops, and if the particles are small enough (sand size or smaller), winds shape the feature. Where wind is the force distributing the grains inland, the deposit behind the beach becomes a dune.
+            </p>
+            
+            <p>
+            <span class="firstword">These</span> geomorphic features compose what is called the beach profile. The beach profile changes seasonally due to the change in wave energy experienced during summer and winter months. In temperate areas where summer is characterised by calmer seas and longer periods between breaking wave crests, the beach profile is higher in summer. The gentle wave action during this season tends to transport sediment up the beach towards the berm where it is deposited and remains while the water recedes. Onshore winds carry it further inland forming and enhancing dunes.
+            </p>
+            
+            <img class="beach2" src="beach2.jpg" alt="Beach Picture 2">
+
+            <p>
+            <span class="firstword">Conversely</span>, the beach profile is lower in the storm season (winter in temperate areas) due to the increased wave energy, and the shorter periods between breaking wave crests. Higher energy waves breaking in quick succession tend to mobilise sediment from the shallows, keeping it in suspension where it is prone to be carried along the beach by longshore currents, or carried out to sea to form longshore bars, especially if the longshore current meets an outflow from a river or flooding stream. The removal of sediment from the beach berm and dune thus decreases the beach profile.
+            </p>
+            
+            <p>
+            <span class="firstword">In</span> tropical areas, the storm season tends to be during the summer months, with calmer weather commonly associated with the winter season. If storms coincide with unusually high tides, or with a freak wave event such as a tidal surge or tsunami which causes significant coastal flooding, substantial quantities of material may be eroded from the coastal plain or dunes behind the berm by receding water. This flow may alter the shape of the coastline, enlarge the mouths of rivers and create new deltas at the mouths of streams that had not been powerful enough to overcome longshore movement of sediment.
+            </p>
+            
+            <p>
+            <span class="firstword">The</span> opening of the resort in Brighton and its reception of royal patronage from King George IV, extended the seaside as a resort for health and pleasure to the much larger London market, and the beach became a centre for upper-class pleasure and frivolity. This trend was praised and artistically elevated by the new romantic ideal of the picturesque landscape; Jane Austen's unfinished novel Sanditon is an example of that. Later, Queen Victoria's long-standing patronage of the Isle of Wight and Ramsgate in Kent ensured that a seaside residence was considered as a highly fashionable possession for those wealthy enough to afford more than one home.
+            </p>
+            
+            <div id="thankyou">
+                
+                <img src="thankyou.jpg" alt="Thank You" width="350">
+            
+            </div>  
+        
+        </article>
+
+        <footer>
+            
+            <p id="footertext"><span class="firstword">A</span> beach is an unstable environment that exposes plants and animals to changeable and potentially harsh conditions. Some animals burrow into the sand and feed on material deposited by the waves. Crabs, insects and shorebirds feed on these beach dwellers. The endangered piping plover and some tern species rely on beaches for nesting. Sea turtles also bury their eggs in ocean beaches. Seagrasses and other beach plants grow on undisturbed areas of the beach and dunes.
+            </p>
+        
+        </footer>
+    
+    </div>
+
+</body>
+
+</html>

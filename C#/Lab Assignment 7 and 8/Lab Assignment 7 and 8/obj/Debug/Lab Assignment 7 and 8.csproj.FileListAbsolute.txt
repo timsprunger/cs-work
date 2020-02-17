@@ -1,0 +1,10 @@
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\bin\Debug\Lab Assignment 7 and 8.exe.config
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\bin\Debug\Lab Assignment 7 and 8.exe
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\bin\Debug\Lab Assignment 7 and 8.pdb
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\obj\Debug\Lab Assignment 7 and 8.csprojAssemblyReference.cache
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\obj\Debug\Lab_Assignment_7_and_8.PirateTranslator.resources
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\obj\Debug\Lab_Assignment_7_and_8.Properties.Resources.resources
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\obj\Debug\Lab Assignment 7 and 8.csproj.GenerateResource.cache
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\obj\Debug\Lab Assignment 7 and 8.csproj.CoreCompileInputs.cache
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\obj\Debug\Lab Assignment 7 and 8.exe
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment 7 and 8\Lab Assignment 7 and 8\obj\Debug\Lab Assignment 7 and 8.pdb

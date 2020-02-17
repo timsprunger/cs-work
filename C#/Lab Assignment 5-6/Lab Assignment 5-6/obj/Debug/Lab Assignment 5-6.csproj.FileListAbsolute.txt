@@ -1,0 +1,10 @@
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\bin\Debug\Lab Assignment 5-6.exe.config
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\bin\Debug\Lab Assignment 5-6.exe
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\bin\Debug\Lab Assignment 5-6.pdb
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\obj\Debug\Lab Assignment 5-6.csprojAssemblyReference.cache
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\obj\Debug\Lab_Assignment_5_6.Palindromes.resources
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\obj\Debug\Lab_Assignment_5_6.Properties.Resources.resources
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\obj\Debug\Lab Assignment 5-6.csproj.GenerateResource.cache
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\obj\Debug\Lab Assignment 5-6.csproj.CoreCompileInputs.cache
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\obj\Debug\Lab Assignment 5-6.exe
+C:\Users\Tim\Desktop\Visual Studio Projects\Lab Assignment #5 & #6\Lab Assignment 5-6\Lab Assignment 5-6\obj\Debug\Lab Assignment 5-6.pdb

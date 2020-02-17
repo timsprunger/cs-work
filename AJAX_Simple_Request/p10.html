@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Getting To Know You Questionnaire</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="p10.css"/>
+    <script src="jquery-3.3.1.min.js"></script>
+    
+    <script>
+    
+        $("document").ready(start);
+
+        function start()
+        {
+            $("#submit").click(submit);
+        }
+
+        function submit()
+        {        
+            var firstData = $("#firstData").val();         
+            var lastData = $("#lastData").val();
+            var addressData = $("#addressData").val();
+            var cityData = $("#cityData").val();             
+            var stateData = $("#stateData").val();  
+            var zipData = $("#zipData").val();  
+            var movieData = $('input[name=movie]:checked').val();
+            var meal = document.getElementById("mealData");
+            var mealData = meal.options[meal.selectedIndex].value;
+            var pizzaData = $('input[name=pizza]:checked').val();
+            var familyData = $("#familyData").val();  
+            var aboutData = $("#aboutData").val();        
+
+            var submitMessage = "Submitting Form..."; 
+            $("#status").html(submitMessage); 
+
+            var request = $.ajax({
+                url: "p10save.php",
+                type: "POST",
+                data: { firstname : firstData, lastname : lastData, address : addressData, city : cityData, state : stateData, zip : zipData, movie: movieData, meal : mealData, pizza : pizzaData, family : familyData, about : aboutData },
+                dataType: "html"
+            }); 
+
+            request.done(function(msg)
+            {  
+                $("#status").html( msg );
+                showAll();
+            });
+
+            request.fail(function(jqXHR, textStatus)
+            {
+            alert("AJAX Request Failed: " + textStatus);             
+            });
+        }
+
+        function showAll()
+        {
+            $("#update").html("Updating Total...")
+            
+            var request = $.ajax({
+                url: "p10summary.php",
+                dataType: "html"
+            });
+            
+            request.done(function(msg)
+            {
+                $("#update").html("Totals Updated");       
+                
+                $("#total").html(msg);
+            });
+            
+            request.fail(function(jqXHR, textStatus) 
+            {
+                alert("AJAX Request Failed: " + textStatus);                
+            });   
+        }
+</script>
+    
+</head>
+
+<body>
+    <h1>Getting To Know You Questionnaire</h1>
+    <hr>
+
+    <h3>Personal Information</h3>
+
+    <!--Text Boxes-->
+    <p>First Name<br>
+        <input id="firstData" type="text" name="firstname" size="50" required/>
+    </p>
+
+    <p>Last Name<br>
+        <input id="lastData" type="text" name="lastname" size="20" required/>
+    </p>
+
+    <p>Address<br>
+        <input id="addressData" type="text" name="address" size="50" required/>
+    </p>
+
+    <p>City<br>
+        <input id="cityData" type="text" name="city" size="40" required/>
+    </p>
+
+    <p>State<br>
+        <input id="stateData" type="text" name="state" size="30" required/>
+    </p>
+
+    <p>Zip Code<br>
+        <input id="zipData" type="text" name="zip" size="30" required/>
+    </p>
+
+    <hr>
+
+    <h3>Fun Facts About You</h3>
+
+    <!--Radio Buttons-->
+
+    <p><strong>What is your favorite genre of movies?</strong><br>
+        <input type="radio" name="movie" value="Action" checked="checked"/> Action<br>
+        <input type="radio" name="movie" value="Comedy"/> Comedy<br>
+        <input type="radio" name="movie" value="Romance"/> Romance<br>
+        <input type="radio" name="movie" value="Science Fiction"/> Science Fiction
+    </p>
+
+    <!--Drop Down Menu-->
+    <h4>What is your favorite meal? 
+        <select id="mealData" name="meal">
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+        </select>
+    </h4>
+
+    <!--Checkbox-->
+    <p><strong>Like pizza?</strong>
+        <input id="pizzaData" type="checkbox" name="pizza"/>
+    </p>
+
+    <p><strong>How many people are in your family? </strong>
+        <input id="familyData" type="text" name="family" size="10" required/>
+    </p>
+
+    <!--Multiple Line Text Box-->
+    <p><strong>Describe yourself in one paragraph:</strong><br>
+        <textarea id="aboutData" name="about" rows="6" cols="115"></textarea>
+    </p>
+
+    <hr>
+
+    <!--Submit Button-->
+    <p><button id="submit">Submit</button> <button id="count">Count</button></p>
+
+    <h3 class="inline">Submission Status</h3><br>
+    <span id="status"></span><br><br>
+    
+    <h3 class="inline">Total People Who Like Pizza</h3><br>
+    <span id="update"></span><br>
+    <span id="total"></span>
+
+</body>
+</html>

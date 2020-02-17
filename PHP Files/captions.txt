@@ -1,0 +1,4 @@
+eniac.jpg, ENIAC (1946)
+mayer.jpg, Melissa Mayer Yahoo CEO (2012)
+stevejobs.jpg, Steve Jobs
+hopper.jpg, Grace Hopper (COBOL)

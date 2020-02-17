@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Raspberry Pi API Weather Display</title>
+</head>
+
+<body>
+	<h1>Raspberry Pi API Weather Display</h1>
+	<h2>Hardware Needed</h2>
+	<ul>
+		<li>Rasperry Pi 3 Motherboard</li>
+		<li>Power Cable for Raspberry Pi</li>
+		<li>MicroSD Card</li>
+		<li>Keyboard with USB Port</li>
+		<li>Mouse with USB Port</li>
+		<li>HDMI to DVI Cable</li>
+		<li>TV or Monitor</li>
+	</ul>
+	<h2>Software Needed</h2>
+	<ul>
+		<li>NOOBS Operating System</li>
+		<li>Apache Open Source Web Server Application</li>
+		<li>PHP Module for Apache</li>
+		<li>OpenWeatherMap API Key</li>
+	</ul>
+	<h2>Coding Needed</h2>
+	<ul>
+		<li>HTML5</li>
+		<li>CSS</li>
+		<li>PHP</li>
+	</ul>
+    <h2>Project Steps</h2>
+	<h3>1. Installing Noobs</h3>
+	<p>Install NOOBS Operating System from Raspberry Pi’s Website.  This will result in a .zip file. You will need to unzip the file and drag the contents onto your microSD card. The link for NOOBS can be found on the link below.</p>
+    <a href="https://www.raspberrypi.org/downloads/"> <mark>www.raspberrypi.org/downloads</mark></a> 
+	<p>Plug in your Raspberry Pi power supply cord after your mouse, keyboard, mouse, and monitor are connected.</p>
+	<p>Select Raspian as your Operating System for your Raspberry Pi to use and complete the installation process.</p>
+	<h3>2. Register for API Key</h3>
+	<p>Register for a Unique API Weather Key from OpenWeatherMap.org.  Save this developer key for use later on in the project. The link to download the API key can be found below</p>
+    <a href="http://www.openweathermap.org/api/"> <mark>www.openweathermap.org/api</mark> </a> 
+	<h3>3. Install Apache</h3>
+	<p>Apache is a web server application which can be installed on the Raspberry Pi to allow it to serve web pages. On its own, Apache can serve HTML files over HTTP, and, with additional modules, can serve dynamic web pages using scripting languages such as PHP. Run the command below in the terminal to install Apache.</p>
+	<p><mark>sudo apt-get install apache2 -y</mark></p>
+	<h3>4. Change Default Web Page</h3>
+	<p>After installing apache, one default file called index.html is added to the directory /var/www/html. Because, by default, this file is owned by the root directory, you have to run the two commands below to change the file ownership to your own user.</p>         
+	<p><mark>sudo chown pi: index.html</mark></p>
+	<h3>5. Install PHP Module for Apache Web Server</h3>
+    <p>This module allows your Apache server to be able to process PHP files, you have to install the latest version of PHP and the PHP module from Apache by running the command below in the terminal.</p>
+	<p><mark>sudo apt-get install php libapache2-mod-php -y</mark></p>
+	<h3>6. Change Default Index</h3>
+	<p>Remove Default index.html file and create new PHP file by using the default graphical editor on the Raspberry Pi called Leafpad by running the two commands below.</p>
+	<p><mark>sudo rm index.html</mark></p>
+	<p><mark>sudo leafpad index.php</mark></p>
+	<h3>7. Complete Coding Needed</h3>
+	<p>Below is the HTML, CSS, and PHP code I used for the project.  You will need to update the link in your PHP code to use your own personal API developer key and to display the weather in the location of your choice.</p>
+	<img src="htmlphp.png" alt="HTML/PHP" width="400px"/>
+	<img src="css.png" alt="CSS" width="200px"/>
+	<p>After creating your files, using the command line, move these files to the /var/www/html directory.</p>
+	<h3>8. Altering PHP Code to Access Your Own Data</h3>
+    <p>In order to be able to access your own location's data, you have to update the link in the PHP code to use your own developer API key and to use your location's specific ID. A complete list of location IDs can be found in a file located in the link below.</p>
+	<a href="http://www.openweathermap.org/appid/"> <mark>www.openweathermap.org/appid</mark></a> 
+	<h3>9. Adding the Weather Page to the Startup</h3>
+	<p>Install Midori. Midori is a lightweight web-browser that has a kiosk mode suited for startup.</p>    
+	<p><mark>sudo apt-get update and sudo apt-get install midori</mark></p>
+	<p> Install Matchbox. Matchbox is a lightweight window manager that is suited for command 	  line startup.</p>
+	<p><mark>sudo apt-get install matchbox</mark></p>
+	<p>The next step is to ensure that the xset commands are workign correctly.  This may not do anything if it is already updated.</p>
+	<p><mark>sudo apt-get install x11-xserver-utils</mark></p>
+	<p>Create a file in /home/pi called startMidori (cd /home/pi, then sudo nano startMidori.txt). Add the information below to the file.</p>
+	<img src="startMidori.png" alt="startMidori" width="350px"/>
+	<h3>10. Executing Script on Startup</h3>
+	<p>The final part is to edit the file that will execute this on startup. Edit the /etc/rc.local file (go all the way out to the root - use sudo nano rc.local). Most of the text will be there, make these changes to appear like this:</p>
+	<img src="startup.png" alt="startup.png" width="400px"/>
+	<h3>11.Altering startMidori File</h3>
+    <p>In order to give the internet time to connect before it tries to retrieve data from the OpenWeatherMapAPI database, you must add a simple line of code to your startMidori file. Navigate to this file and type <mark>sleep 5</mark> on a separate line below the first comment as shown below.</p>
+	<img src="sleep.png" alt="Sleep 5" width="400px"/>
+    <h3>12. Altering startMidori File (cont...)</h3>
+    <p>In order to make the browser auto refresh after a certain number of seconds, simply open up the startMidori file and type <mark>-i 300</mark> at the end of the last line of text. Also, if you want to change how frequently it refreshes, simply change the number after the -i command.</p>
+    <h3>13. Setting Startup to Command Line</h3>
+	<p>In order for your Raspberry Pi to be able to automatically start up the weather display when it is turned on, you must set adjust your Pi to start up in the command line instead of the GUI. This can be done by entering the commands below.</p>
+	<p><mark>sudo raspi-config</mark></p>
+	<p>Go to <mark>Boot Options</mark>, Select <mark>Desktop/CLI</mark>, and Select <mark>Console</mark></p>
+    <h3>14. Displaying Finished Product</h3>
+	<p>On the Raspberry Pi web server, the final product could then be displayed with the web browser by typing <mark>http://localhost</mark> in the URL.
+    <h2>Extra Shortcuts and Tricks</h2>
+	<p>To refresh the web page at any time, simply press the <mark>F5 key</mark></p>
+    <p>To exit out of the weather display to the command line, press <mark>Ctrl-Alt-F1</mark></p>
+	<p>After navigating back to the command line, type <mark>startx</mark> to start up the standard GUI for the Raspberry Pi</p>
+    <h2>References</h2>
+    <p><a href="http://www.instructables.com/id/Raspberry-Pi-Web-Server-Weather-Interface/"><mark>www.instructables.com/id/Raspberry-Pi-Web-Server-Weather-Interface</mark></a></p>
+	<p><a href="http://www.openweathermap.org/api/"> <mark>www.openweathermap.org/api</mark></a></p>
+	<p><a href="https://www.www.raspberrypi.org/documentation/remote-access/web-server/apache.md/"> <mark>www.www.raspberrypi.org/documentation/remote-access/web-server/apache.md</mark></a></p>
+	<p><a href="https://stackoverflow.com/questions/25575466/how-to-use-openweathermap-api-key/"> <mark>stackoverflow.com/questions/25575466/how-to-use-openweathermap-api-key</mark></a></p> 
+	<p><a href="https://www.openweathermap.org/appid/"> <mark>www.openweathermap.org/appid</mark></a></p> 
+    <h2>Next Steps</h2>
+    <p>If you wanted to spend more time making additions to this project, a few possible ideas are found in the list below.</p>
+    <ul>
+        <li>Add different forecast options for weather including maps and 7-day forecasts</li>
+        <li>Creating a GUI to make the web page interactive including items like weather alerts and additional links to click on.</li>
+        <li>Adding unique information including historical facts or record high and low temperatures for that day.</li>
+    </ul>
+    </body>
+</html>	
