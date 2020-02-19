@@ -1,0 +1,54 @@
+import java.util.*;
+
+/*
+	p2.java	
+	Tim Sprunger
+	August 28, 2019
+	calculates primes using Sieve of Eratosthenes and demonstrates command line arguments
+	and methods
+
+	1.
+	2.
+	3.
+*/
+
+public class p2{
+	public static void main(String[] args){
+		int num = 100;
+
+		if (args.length > 0) {
+			String argument = Integer.parseInt(args[0];
+		
+		showPrimes( num );
+	}
+
+
+	
+	
+	public static void showPrimes(int N){
+		boolean primeCheck[] = new boolean[N+1];
+		primeCheck[0] = false;
+		primeCheck[1] = false;
+		
+		for (int x=2; x<(primeCheck.length); x++){
+			primeCheck[x] = true;
+		}
+			
+		//for (int i=2; i<=( Math.sqrt(N) ); i++){
+		for (int i=2; i<=N; i++){
+			if (primeCheck[i]){
+//				for (int j=(i*i); j<=N; j+=i){
+				for (int j=(i+i); j<=N; j+=i){
+
+					primeCheck[j] = false;						
+				}
+			}
+		}
+		
+		for (int z=2; z<=N; z++){
+			if (primeCheck[z]){
+				System.out.println(z);
+			}
+		}
+	} 
+}
